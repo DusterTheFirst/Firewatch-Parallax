@@ -4,7 +4,6 @@ $(document).mousemove(function(e){
     
     let X = e.pageX/* - middleX;*/
     let Y = e.pageY/* - middleY;*/
-    console.log(`${e.pageX}:${middleX}:${X}, ${e.pageY}:${middleY}:${Y}`); 
 
     var layers = document.getElementsByClassName("parallax");
     var layer, speed, yPos, xPos;
@@ -14,6 +13,5 @@ $(document).mousemove(function(e){
         var yPos = -(Y * speed / 250);
         var xPos = -(X * speed / 500);
         layer.setAttribute('style', `transform: translate3d(${xPos}px, ${yPos}px, 0px)`);
-
     }
 }); 
