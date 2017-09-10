@@ -2,8 +2,8 @@ $(document).mousemove(function(e){
     let middleX = $(document).width()/2;
     let middleY = $(document).height()/2;
     
-    let X = e.pageX/* - middleX;*/
-    let Y = e.pageY/* - middleY;*/
+    let X = e.pageX - middleX;
+    let Y = e.pageY - middleY;
 
     var layers = document.getElementsByClassName("parallax");
     var layer, speed, yPos, xPos;

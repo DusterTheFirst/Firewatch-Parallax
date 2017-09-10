@@ -34,10 +34,12 @@ html, body {
 }
 
 .keyart_layer {
-    background-position: bottom center;
+    background-position: center center;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    width: calc(100% + 400px);
+    width: calc(100% + 50%);
+    height: calc(100% + 50%);
+    top: -25%;
+    left: -25%;
     position: absolute;
-    height: calc(100% + 400px);
 }
