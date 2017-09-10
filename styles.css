@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#keyart-0 {
+    background-image: url('../images/parallax/parallax0@2x.png');
+    background-color: #ffaf1b;
+}
+#keyart-1 {
+    background-image: url('../images/parallax/parallax1@2x.png');
+}
+#keyart-2 {
+    background-image: url('../images/parallax/parallax2@2x.nologo.png');
+}
+#keyart-3 {
+    background-image: url('../images/parallax/parallax3@2x.png');
+}
+#keyart-4 {
+    background-image: url('../images/parallax/parallax4@2x.png');
+}
+#keyart-5 {
+    background-image: url('../images/parallax/parallax5@2x.png');
+}
+#keyart-6 {
+    background-image: url('../images/parallax/parallax6@2x.png');
+}
+#keyart-7 {
+    background-image: url('../images/parallax/parallax7@2x.png');
+}
+#keyart-8 {
+    background-image: url('../images/parallax/parallax8@2x.png');
+}
+
+.keyart_layer {
+    background-position: bottom center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: calc(100% + 400px);
+    position: absolute;
+    height: calc(100% + 400px);
+}

@@ -1,80 +1,23 @@
-<script src="js/jquery-1.12.0.min.js"></script>
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-    
-    #keyart-0 {
-		background-image: url('../images/parallax/parallax0@2x.png');
-		background-color: #ffaf1b;
-	}
-	#keyart-1 {
-		background-image: url('../images/parallax/parallax1@2x.png');
-	}
-	#keyart-2 {
-		background-image: url('../images/parallax/parallax2@2x.nologo.png');
-	}
-	#keyart-3 {
-		background-image: url('../images/parallax/parallax3@2x.png');
-	}
-	#keyart-4 {
-		background-image: url('../images/parallax/parallax4@2x.png');
-	}
-	#keyart-5 {
-		background-image: url('../images/parallax/parallax5@2x.png');
-	}
-	#keyart-6 {
-		background-image: url('../images/parallax/parallax6@2x.png');
-	}
-	#keyart-7 {
-		background-image: url('../images/parallax/parallax7@2x.png');
-	}
-	#keyart-8 {
-		background-image: url('../images/parallax/parallax8@2x.png');
-	}
-    
-    .keyart_layer {
-        background-position: bottom center;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        width: calc(100% + 400px);
-        position: absolute;
-        height: calc(100% + 400px);
-    }
-</style>
-<body>
-    <div class="keyart" id="parallax">
-        <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>		<!-- 00.0 -->
-        <div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div>	<!-- 12.5 -->
-        <div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>		<!-- 25.0 -->
-        <div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>	<!-- 37.5 -->
-        <div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>		<!-- 50.0 -->
-        <div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>	<!-- 62.5 -->
-        <div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>		<!-- 75.0 -->
-        <div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>		<!-- 87.5 -->
-        <div class="keyart_layer parallax" id="keyart-8" data-speed="81"></div>		<!-- 100. -->
-    </div>
-</body>
-<script>
-    $(document).mousemove(function(e){ 
-        let middleX = $(document).width()/2;
-        let middleY = $(document).height()/2;
-        
-        let X = e.pageX/* - middleX;*/
-        let Y = e.pageY/* - middleY;*/
-        console.log(`${e.pageX}:${middleX}:${X}, ${e.pageY}:${middleY}:${Y}`); 
-    
-        var layers = document.getElementsByClassName("parallax");
-		var layer, speed, yPos, xPos;
-		for (var i = 0; i < layers.length; i++) {
-			layer = layers[i];
-			speed = layer.getAttribute('data-speed');
-			var yPos = -(Y * speed / 250);
-            var xPos = -(X * speed / 500);
-			layer.setAttribute('style', `transform: translate3d(${xPos}px, ${yPos}px, 0px)`);
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firewatch Parallax</title>
 
-		}
-    }); 
-</script>
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script src="scripts.js"></script>
+        <link href="styles.css">
+    </head>
+    <body>
+        <div class="keyart" id="parallax">
+            <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>		<!-- 00.0 -->
+            <div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div>	<!-- 12.5 -->
+            <div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>		<!-- 25.0 -->
+            <div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>	<!-- 37.5 -->
+            <div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>		<!-- 50.0 -->
+            <div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>	<!-- 62.5 -->
+            <div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>		<!-- 75.0 -->
+            <div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>		<!-- 87.5 -->
+            <div class="keyart_layer parallax" id="keyart-8" data-speed="81"></div>		<!-- 100. -->
+        </div>
+    </body>
+</html>
